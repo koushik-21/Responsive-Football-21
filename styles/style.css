@@ -26,21 +26,23 @@ body{
     color: #FFFFFF;
 }
 .menu-right a{
-     background-color:  #E02C6D;
+     background-color:  #3061bdaf;
      color: #FFFFFF;
      width: 123px;
      height: 44px;
      padding: 10px 24px;
 }
-/*-------------------
-    top part styles 
-  --------------------*/
+/* top part styles */
 .container{
     display: flex;
     margin-bottom: 70px;
     padding-top: 49px;
     padding-left: 156px;
     padding-right: 141px;
+}
+.container:hover .half-width{
+    transform: scale(1.2);
+    transition: transform 2s ease-in-out;
 }
 .half-width{
     width: 50%;
@@ -54,7 +56,7 @@ body{
 }
 .button{
      text-decoration: none;
-     background-color: #E02C6D;
+     background-color: blue;
      color: #FFFFFF;
      width: 168px;
      height: 44px;
@@ -75,27 +77,63 @@ body{
     padding-left: 30px;
     padding-bottom: 86px;
 }
-/*------------------------
-      middle part styles
- ------------------------- */
- .legend-players{
-     padding-left: 180px;
-     padding-right: 210px;
- }
+
+/* middle part styles */
+
 .players{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-row-gap:27px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    margin-left: 20px;
 }
-.player{
-    width: 330px;
-    height: 474px;
-    padding: 15px;
-    margin-right: 30px;
-    border:10px solid white;
-    box-shadow:0 0 10px grey;
+.player-frame{
+            width: 400px;
+            height: 550px;
+            border: 2px solid midnightblue;
+            border-radius: 10px;
+            position: relative;
+            margin: 10px;
+            overflow: hidden;
 }
-.player img{
-    width: 300px;
-    height: 256px;
+.photo img{
+    width: 100%;
+    height: 300px;
+    border-radius:10px;
 }
+.player-details{
+    /* display: none; */
+    position: absolute;
+    width: 400px;
+     /* top:0;  */
+}
+.player-details h4{background-color: indigo;
+text-align: center;
+color: white;}
+
+.player-frame:hover .photo-detail{
+    display: block;
+    background-color: rgba(33, 53, 230, 0.404);
+}
+.player-frame:hover .photo{
+    transform: scale(1.2);
+    transition: transform 3s ease-in-out;
+}
+.fab1{
+    font-size: 20px;
+    color: rgba(0, 0, 255, 0.863);
+    padding-left:630px;
+}
+.fab2{
+    padding-right:0px;
+    font-size: 20px;
+    color: red;
+    
+}
+.fab3{
+    font-size: 20px;
+    color: rgba(122, 198, 236, 0.89);
+    }
+    .fab4{
+        font-size: 20px;
+        color: rgba(245, 103, 8, 0.794)
+        }
